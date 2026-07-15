@@ -1,0 +1,41 @@
+{
+  "actions": {
+    "actions/checkout": "9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+    "actions/upload-artifact": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+    "actions/download-artifact": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+    "step-security/harden-runner": "9af89fc71515a100421586dfdb3dc9c984fbf411",
+    "docker/login-action": "650006c6eb7dba73a995cc03b0b2d7f5ca915bee",
+    "docker/build-push-action": "f9f3042f7e2789586610d6e8b85c8f03e5195baf",
+    "aquasecurity/trivy-action": "ed142fd0673e97e23eac54620cfb913e5ce36c25",
+    "anchore/sbom-action": "e22c389904149dbc22b58101806040fa8d37a610",
+    "sigstore/cosign-installer": "6f9f17788090df1f26f669e9d70d6ae9567deba6",
+    "github/codeql-action": "c35d1b164463ee62a100735382aaaa525c5d3496",
+    "ossf/scorecard-action": "4eaacf0543bb3f2c246792bd56e8cdeffafb205a",
+    "gitleaks/gitleaks-action": "e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e"
+  },
+  "tools": {
+    "grype": "0.115.0",
+    "semgrep": "1.168.0",
+    "gitleaks": "8.30.1",
+    "checkov": "3.3.5",
+    "trivy": "0.71.2",
+    "zap": "2.17.0"
+  },
+  "base-images": {
+    "node-alpine": "node:24-alpine@sha256:a0b9bf06e4e6193cf7a0f58816cc935ff8c2a908f81e6f1a95432d679c54fbfd",
+    "nginx-alpine": "nginx:alpine@sha256:54f2a904c251d5a34adf545a72d32515a15e08418dae0266e23be2e18c66fefa"
+  },
+  "dependencies": {
+    "backend": {
+      "express": "5.2.1",
+      "express-rate-limit": "8.5.2",
+      "cors": "2.8.6",
+      "helmet": "8.2.0",
+      "zod": "4.4.3",
+      "pg": "8.22.0"
+    },
+    "frontend": {
+      "note": "All @angular/* packages version-aligned. Exact versions verified in frontend/package.json."
+    }
+  }
+}
